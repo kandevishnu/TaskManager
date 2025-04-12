@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-2 Assignment</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Day-2 of FSD27</h1>
+    </header>
+    <nav>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+        <a href="#embade">Embeded tags</a>
+    </nav>
+    <h2>Student Marks:</h2>
+    <table border="1" cellpadding="5" cellspacing="0" id="table" style="text-align: center;">
+        <tr>
+            <th>Name</th>
+            <th>Telugu</th>
+            <th>Hindi</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+        </tr>
+        <tr>
+            <td>Ram</td>
+            <td>90</td>
+            <td>85</td>
+            <td>88</td>
+            <td>92</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>Shyam</td>
+            <td>78</td>
+            <td>82</td>
+            <td>80</td>
+            <td>75</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>Geeta</td>
+            <td>85</td>
+            <td>90</td>
+            <td>88</td>
+            <td>92</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>Sita</td>
+            <td>80</td>
+            <td>78</td>
+            <td>85</td>
+            <td>88</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Radha</td>
+            <td>95</td>
+            <td>92</td>
+            <td>90</td>
+            <td>88</td>
+            <td>85</td>
+        </tr>
+    </table>
+
+    <section id="form">
+        <h2>Form</h2>
+        <form action="">
+            <label for="name">Name : </label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required><br><br>
+            <label for="password">Password : </label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required><br><br>
+            <label for="gender">Gender : </label> <br>
+            <input type="radio" id="gender" value="Male">Male<br>
+            <input type="radio" id="gender" value="Female">Female<br><br>
+            <label for="city">City : </label>
+            <select name="city" id="city" required>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+            </select><br><br>
+            <label for="text">Feedback : </label><br>
+            <textarea name="text" id="text" cols="30" rows="10" placeholder="Enter your feedback"></textarea><br><br>
+            <input type="submit" value="Submit" id="submit">
+            <input type="reset" value="Reset" id="reset"><br><br>
+        </form>
+    </section>
+
+    <h2 id="embade">Embaded video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/X9bBUBX2jl0?si=4ZXHkpR-4EgEqbXL" frameborder="0"></iframe>
+
+    <footer>
+        <p>This is the end of the Assignment.</p>
+    </footer>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3420350822!2d78.24323260275467!3d17.412281015798104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1743783055697!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

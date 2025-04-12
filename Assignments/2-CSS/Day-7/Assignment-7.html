@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            background-color: black;
+            gap: 35%;
+            padding: 10px;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            font-size: 1.5rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            height: 60vh;
+            align-items: center;
+        }
+
+        .card {
+            height: 300px;
+            width: 250px;
+            background-color: rgba(245, 245, 245, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 30px;
+        }
+        .rel{
+            position: relative;
+            top: -300px;
+            left: 55%;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(245, 245, 245, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .abs{
+            position: absolute;
+            top: 70%;
+            left: 80%;
+            width: 300px;
+        }
+        .card-2{
+            position: sticky;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <a href="#">Navbar</a>
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Content</a>
+            <a href="#">Help</a>
+        </div>
+    </nav>
+    <section class="cards">
+        <div class="card">
+            <img src="https://cdn.wallpapersafari.com/74/69/C9QEUs.jpg" alt="image">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam tempora sunt voluptatem iusto dolor
+                eligendi vero ullam.</p>
+        </div>
+        <div class="card card-2">
+            <img src="https://th.bing.com/th/id/OIP.qc0tVA2WAqIJDQRzccDdrwHaEK?rs=1&pid=ImgDetMain" alt="image">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam tempora sunt voluptatem iusto dolor
+                eligendi vero ullam, natus velit aut eum consequatur.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.tripsavvy.com/thmb/j612aq-Vz0HVu-KvH_OtNwrmE8A=/2122x1413/filters:fill(auto,1)/GettyImages-531732818-592d24ec3df78cbe7e956e68.jpg"
+                alt="image">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam tempora sunt voluptatem iusto dolor
+                eligendi vero ullam.</p>
+        </div>
+    </section>
+
+    <img src="https://www.tripsavvy.com/thmb/j612aq-Vz0HVu-KvH_OtNwrmE8A=/2122x1413/filters:fill(auto,1)/GettyImages-531732818-592d24ec3df78cbe7e956e68.jpg" style="float: left; width: 400px;">
+    <p>This wraps around the image.</p>
+    <p style="clear: both;">This appears fully below the floated image.</p>
+
+    <img src="https://th.bing.com/th/id/OIP.qc0tVA2WAqIJDQRzccDdrwHaEK?rs=1&pid=ImgDetMain" alt="image" class="rel">
+
+    <img src="https://cdn.wallpapersafari.com/74/69/C9QEUs.jpg" alt="image" class="abs">
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta description="Day-5 Assignment : Portfolio using CSS">
+    <meta author="Kande Vishnu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio using class</title>
+    <style>
+        .name {
+            color: #4CAF50;
+            font-size: 2em;
+        }
+        a{
+            text-decoration: none;
+            color: #4491f0;
+            font-weight: bold;
+            padding: 1%;
+            margin: 1rem;
+        }
+        .a{
+            color: red;
+        }
+        .b{
+            color: rgb(0, 255, 0);
+        }
+        .c{
+            color: #0000ff;
+        }
+        .about{
+            text-align: center;
+            text-transform: capitalize;
+            text-decoration: underline;
+            color: rgb(242, 160, 59);
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            line-height: 10px;
+        }
+        footer p{
+            text-align: center;
+            font-size: 1.2em;
+            color: #00ffe5;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="name">Kande Vishnu</h1>
+        <p>Web Developer & Programmer</p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+    
+      <section id="about">
+        <h2>About Me</h2>
+        <p class="about">Hello! I'm Vishnu, a passionate web developer learning HTML, CSS, JavaScript, and backend technologies. I love building simple and beautiful web applications.</p>
+      </section>
+    
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li class="a"><strong>Guessing Number Game:</strong> A fun Python game to guess the number.</li>
+          <li class="b"><strong>Bill Generator:</strong> A simple Python bill generator for small shops.</li>
+          <li class="c"><strong>Smart Expense Tracker:</strong> A web-based PHP & JavaScript app to manage expenses.</li>
+        </ul>
+      </section>
+    
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: vishnu@example.com</p>
+        <p>Phone: +91 9876543210</p>
+      </section>
+    
+      <footer>
+        <p>&copy; 2025 Kande Vishnu</p>
+      </footer>
+</body>
+</html>

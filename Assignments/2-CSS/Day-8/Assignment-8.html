@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            background-color: black;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width:1576px) {
+            nav {
+                display: flex;
+                gap: 35%;
+                padding: 10px 10%;
+            }
+
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+            }
+            footer p{
+                color: beige;
+            }
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                display: flex;
+                gap: 35%;
+                padding: 10px;
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 576px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .nav2 a {
+                font-size: 1rem;
+            }
+            footer p{
+                letter-spacing: 2px;
+                font-size: 1.5em;
+            }
+        }
+
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            height: auto;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p{
+            animation: fadeIn 2s infinite alternate, spc 2s infinite alternate;
+            font-size: 1.2em;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes spc {
+            0%{
+                letter-spacing: 0.5rem;
+            }
+
+            90% {
+                letter-spacing: 0.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <a href="#">Navbar</a>
+        </div>
+        <div class="nav nav2">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Content</a>
+            <a href="#">Help</a>
+        </div>
+    </nav>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://2.bp.blogspot.com/_EZ16vWYvHHg/S79tDYAX1bI/AAAAAAAAJ2w/Do2kAV8FCIE/s1600/www.BancodeImagenesGratuitas.com-FAP-17.jpg" alt="Image 1">
+            <h3>Card Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae, cum quidem amet atque cumque. Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="card">
+            <img src="https://2.bp.blogspot.com/_EZ16vWYvHHg/S79tDYAX1bI/AAAAAAAAJ2w/Do2kAV8FCIE/s1600/www.BancodeImagenesGratuitas.com-FAP-17.jpg" alt="Image 2">
+            <h3>Card Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae, cum quidem amet atque cumque. Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="card">
+            <img src="https://2.bp.blogspot.com/_EZ16vWYvHHg/S79tDYAX1bI/AAAAAAAAJ2w/Do2kAV8FCIE/s1600/www.BancodeImagenesGratuitas.com-FAP-17.jpg" alt="Image 3">
+            <h3>Card Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae, cum quidem amet atque cumque. Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="card">
+            <img src="https://2.bp.blogspot.com/_EZ16vWYvHHg/S79tDYAX1bI/AAAAAAAAJ2w/Do2kAV8FCIE/s1600/www.BancodeImagenesGratuitas.com-FAP-17.jpg" alt="Image 4">
+            <h3>Card Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae, cum quidem amet atque cumque. Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Kande Vishnu. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
