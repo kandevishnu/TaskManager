@@ -1,0 +1,135 @@
+<!-- 
+Mini Project No. 1: Login Page UI
+
+Description: Create a stylish login form centered on the page.
+
+What to include:
+
+Input fields (email, password)
+
+Submit button
+
+Optional "Remember Me" checkbox
+
+
+CSS Concepts to Use:
+
+Centering using Flexbox
+
+Input focus styles (:focus)
+
+Box shadows
+
+Border-radius
+
+Transitions on buttons -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container{
+            width: 300px;
+            height: 400px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #dfd7d7;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+            text-decoration: underline solid hsl(40, 59%, 39%);
+        }
+        .input-group{
+            margin-bottom: 15px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        label{
+            margin-bottom: 5px;
+            color: #333;
+        }
+        button{
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        button:hover{
+            background-color: #0056b3;
+            transform: scale(1.2);
+        }
+        .btn{
+            text-align: center;
+        }
+        #email, #password{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            border-radius: 15px;
+        }
+        input:focus{
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            opacity: 0.5;
+        }
+        .input-group-2{
+            margin-bottom: 5%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            
+        }
+        #remember-me:hover{
+            scale: 1.4;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <form action="">
+            <div class="input-group">
+                <label for="email" class="label">Email:</label>
+                <input type="email" id="email" placeholder="Enter your Email Id" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your Password" required>
+            </div>
+            <div class="input-group-2">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember Me</label>
+            </div>
+            <div class="btn">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
