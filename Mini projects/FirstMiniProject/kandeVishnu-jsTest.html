@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voting Eligibility Checker</title>
+  <style>
+
+    /* css for the page */
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .container {
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-family: Arial, sans-serif;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    #message {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h2>Voting Eligibility Checker</h2>
+
+    <!-- input for Entering age -->
+    <input type="text" id="age" placeholder="Enter your age" required />    
+    
+    <!-- button to submit -->
+    <button onclick="verify()">Check Eligibility</button>
+
+    <!-- message to display eligibility result in DOM  -->
+    <p id="message"></p>
+  </div>
+
+  <!-- javascript logic to check eligibility -->
+  <script>
+
+    // function to check if the user is eligible to vote or not
+    function verify() {
+      var age = document.getElementById("age").value;
+      var message = document.getElementById("message");
+
+      if (age >= 18) {
+        // if age is greater than or equal to 18, eligible to vote
+        message.innerHTML = "You are eligible to vote.";
+        message.style.color = "green";
+      } 
+      
+      else {
+        // if age is less than 18, not eligible to vote
+        message.innerHTML = "You are not eligible to vote.";
+        message.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
