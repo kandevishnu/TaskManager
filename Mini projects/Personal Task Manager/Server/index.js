@@ -4,8 +4,12 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 
+
 import Dbconnection  from "./utilities/database.js";
 import router  from "./routes/authRoutes.js";
+import user from "./routes/userRoutes.js";
+import taskRoutes from "./routes/taskRoutes.js";
+
 
 dotenv.config()
 const server = express();
@@ -17,6 +21,9 @@ server.use(express.json());
 server.use(cookieParser());
 
 server.use("/api/auth", router);
+server.use("/api/user", user);
+server.use("/api/tasks", taskRoutes);
+
 
 const startserver = async () => {
   try {
