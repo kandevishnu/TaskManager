@@ -9,6 +9,7 @@ import Dbconnection  from "./utilities/database.js";
 import router  from "./routes/authRoutes.js";
 import user from "./routes/userRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
+import otpRoutes from "./routes/otpRoutes.js";
 
 
 dotenv.config()
@@ -23,7 +24,7 @@ server.use(cookieParser());
 server.use("/api/auth", router);
 server.use("/api/user", user);
 server.use("/api/tasks", taskRoutes);
-
+server.use("/api/otp", otpRoutes);
 
 const startserver = async () => {
   try {
