@@ -14,7 +14,6 @@ user.get("/me", verifyToken, async (req, res) => {
     if (!user) return res.status(404).json({ message: "User not found" });
 
     res.json({ user });
-    console.log("Decoded user id:", req.user.id);
 
   } catch (error) {
     console.error("Error fetching user from token:", error);
