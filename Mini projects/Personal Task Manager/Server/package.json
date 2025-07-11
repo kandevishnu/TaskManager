@@ -4,8 +4,8 @@
   "description": "This is the backend setup for my Personal Task Manager App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "type": "module",
   "author": "Kande Vishnu",
@@ -19,16 +19,9 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.1",
-    "nodemailer": "^7.0.5",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
-  },
-  "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "target": "ESNext",
-    "baseUrl": "./"
-  },
-  "include": [
-    "**/*.js"
-  ]
+  }
 }
