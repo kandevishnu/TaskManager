@@ -3,9 +3,9 @@ import nodemailer from "nodemailer";
 import bcrypt from "bcryptjs";
 import User from "../models/userModel.js";
 
+
 // OTP generator
-const generateOTP = () =>
-  Math.floor(100000 + Math.random() * 900000).toString();
+const generateOTP = () => Math.floor(100000 + Math.random() * 900000).toString();
 
 export const sendOtp = async (req, res) => {
   const { name, email, gender, password } = req.body;
@@ -32,10 +32,10 @@ export const sendOtp = async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: `"Task Manager" <${process.env.EMAIL_USER}>`,
-      to: email,
-      subject: "🚀 Your Task Manager OTP Code",
-      html: `
+  from: `"Task Manager" <${process.env.EMAIL_USER}>`,
+  to: email,
+  subject: "🚀 Your Task Manager OTP Code",
+  html: `
     <div style="font-family: Arial, sans-serif; background-color: #f9fafb; padding: 30px;">
       <div style="max-width: 480px; margin: auto; background-color: #ffffff; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
         <h2 style="text-align: center; color: #10b981; margin-bottom: 10px;">🔐 Verify Your Email</h2>
@@ -63,7 +63,8 @@ export const sendOtp = async (req, res) => {
       </p>
     </div>
   `,
-    });
+});
+
 
     // Hash password here, so frontend never sees plain text
     const hashedPassword = await bcrypt.hash(password, 10);
