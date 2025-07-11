@@ -97,7 +97,11 @@ const VerifyOTP = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 to-indigo-300">
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Verify OTP</h2>
+        <h2 className="text-2xl font-semibold mb-2 text-center">Verify OTP</h2>
+
+        <p className="mt-4 text-center mb-4 text-sm text-gray-600">
+          If you don't see the email, check your <strong className="text-red-500">spam folder</strong>.
+        </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -134,6 +138,7 @@ const VerifyOTP = () => {
         <p className="mt-4 text-center text-sm text-gray-600">
           OTP sent to <strong>{tempUser.email}</strong>
         </p>
+        
       </div>
     </div>
   );

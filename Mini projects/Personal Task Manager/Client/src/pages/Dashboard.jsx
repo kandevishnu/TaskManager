@@ -76,10 +76,15 @@ const Dashboard = () => {
   const handleDeleteAccount = async () => {
     if (!password) return toast.error("Please enter your password");
     try {
-      await axios.post("/auth/delete-account", { password });
+      await axios.delete("/user/delete", {
+        data: { password },
+        withCredentials: true,
+      });
       toast.success("Account deleted successfully");
-      localStorage.removeItem("user");
-      window.location.href = "/signup";
+      setTimeout(() => {
+        localStorage.removeItem("user");
+        window.location.href = "/";
+      }, 1500);
     } catch (err) {
       toast.error(err.response?.data?.message || "Failed to delete account");
     }
